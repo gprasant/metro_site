@@ -1,69 +1,85 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="css/metro.css" />
-		<style>
-			body { width: 800px; margin: 0 auto; }
-		</style>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
-		<script type="text/javascript" src="js/jquery.metro.js"></script>
-	</head>
-	<body>
-		<h1 class="accent">geek Weekend</h1>
+<head>
+    <link rel="stylesheet" href="css/metro.css" />
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.metro.js"></script>
+</head>
+<body>
+    
+       
+    
+    <h1 class="accent"> <img src="images/dotnet4logo.jpg" /> geek Weekend</h1>
 
-		<div class="metro-pivot">
-			<div class="pivot-item">
-				<h3>about</h3>
-				<p>.NET geek weekend description</p>
-			</div>
-			<div class="pivot-item">
-				<h3>Venue</h3>
-<pre>
-ThoughtWorks Technologies (India) Pvt Ltd. 
-Ascendas International Tech Park
-Zenith - 9th Floor
-Tharamani Road
-Tharamani
-Chennai - 600 113, India
+    <div class="metro-pivot" style="height: 300px">
+        <div class="pivot-item">
+            <h3>about</h3>
+            <p>.NET geek weekend description</p>
+        </div>
+        <div class="pivot-item">
+            <h3>Venue</h3>
+            <p>
+                ThoughtWorks Technologies (India) Pvt Ltd.<br />
+                Ascendas International Tech Park<br />
+                Zenith - 9th Floor<br />
+                Tharamani Road<br />
+                Tharamani<br />
+                Chennai - 600 113, India<br />
+                <br />
+                Date: 28th June 2012<br />
+            </p>
+        </div>
+        <div class="pivot-item">
+            <h3>Register </h3>
+            <div style="position: relative;top: 70px;">
+                email:
+                <input size="35" />
+                <input type="button" title="register" value="submit" />
+            </div>
+        </div>
+    </div>
 
-Date: 28th June 2012
-</pre>
-			</div>
-			<div class="pivot-item">
-				<h3> Contact </h3>
-			</div>
-			<div class="pivot-item">
-				<h3> Register </h3>
-				Coming soon
-			</div>
-		</div>
-		<div class="tiles">
-			<div class="tilerow">
-				<div class="tile one bluebg"><h1>28</h1></div>
-				<div class="tile one bluebg"><h1>06</h1></div>
-				<div class="tile two-h bluebg"><h1>2012</h1></div>
-				
-			</div>
-		</div>
-		
-		<script>
-			var defaults = {
-				animationDuration: 350,
-				headerOpacity: 0.25,
-				fixedHeaders: false,
-				headerSelector: function (item) { return item.children("h3").first(); },
-				itemSelector: function (item) { return item.children(".pivot-item"); },
-				headerItemTemplate: function () { return $("<span class='header' />"); },
-				pivotItemTemplate: function () { return $("<div class='pivotItem' />"); },
-				itemsTemplate: function () { return $("<div class='items' />"); },
-				headersTemplate: function () { return $("<div class='headers' />"); },
-				controlInitialized: undefined,
-				selectedItemChanged: undefined
-			};
+    <div class="tiles">
+        <div class="tilerow">
+            <div class="tile one bluebg">
+                <h1>28</h1>
+            </div>
+            <div class="tile one bluebg">
+                <h1>07</h1>
+            </div>
+            <div class="tile two-h bluebg">
+                <h1>2012</h1>
+            </div>
+        </div>
+    </div>
+    <div class="clear footer">
+        ThoughtWorks Technologies, 2012
+    </div>
 
-			$(function () {
-				$("div.metro-pivot").metroPivot(defaults);
-			});
+    <script>
+        var defaults = {
+            animationDuration: 350,
+            headerOpacity: 0.25,
+            fixedHeaders: false,
+            headerSelector: function (item) { return item.children("h3").first(); },
+            itemSelector: function (item) { return item.children(".pivot-item"); },
+            headerItemTemplate: function () { return $("<span class='header' />"); },
+            pivotItemTemplate: function () { return $("<div class='pivotItem' />"); },
+            itemsTemplate: function () { return $("<div class='items' />"); },
+            headersTemplate: function () { return $("<div class='headers' />"); },
+            controlInitialized: undefined,
+            selectedItemChanged: undefined
+        };
+
+        $(function () {
+            $("div.metro-pivot").metroPivot(defaults);
+        });
 		</script>
-	</body>
+</body>
 </html>
